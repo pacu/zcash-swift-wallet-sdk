@@ -2,7 +2,7 @@
 //  BlockDownloaderTests.swift
 //  ZcashLightClientKitTests
 //
-//  Created by Francisco Gindre on 18/09/2019.
+//  Created by Francisco Gindre on 2019-09-18.
 //  Copyright © 2019 Electric Coin Company. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import XCTest
 @testable import TestUtils
 @testable import ZcashLightClientKit
 
-class BlockDownloaderTests: XCTestCase {
+class BlockDownloaderTests: ZcashTestCase {
     let branchID = "2bb40e60"
     let chainName = "main"
 
@@ -21,7 +21,7 @@ class BlockDownloaderTests: XCTestCase {
     var storage: CompactBlockRepository!
     var network = DarksideWalletDNetwork()
     var rustBackend: ZcashRustBackendWelding!
-    var testTempDirectory: URL!
+
 
     override func setUp() async throws {
         try await super.setUp()
